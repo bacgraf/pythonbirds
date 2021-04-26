@@ -19,3 +19,8 @@ if __name__ == '__main__':
     print(adobe.idade)
     for filho in adobe.filhos:
         print(filho.nome)
+    adobe.sobrenome = 'RML'
+    print(adobe.__dict__)
+    del adobe.filhos
+    print(adobe.__dict__)
+    print(borel.__dict__)
