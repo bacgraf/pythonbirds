@@ -9,6 +9,14 @@ class Pessoa:                   #classe
     def cumprimentar(self):    #método
         return f"ola {id(self)}"
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} -  olhos {cls.olhos}'
+
 if __name__ == '__main__':
     borel = Pessoa(nomme='SHIELD')
     acorde = Pessoa(nomme = 'MARVEL')
@@ -32,3 +40,5 @@ if __name__ == '__main__':
     print(adobe.olhos)
     print(corel.olhos)
     print(id(Pessoa.olhos), id(adobe.olhos), id(corel.olhos))
+    print(Pessoa.metodo_estatico(), adobe.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), adobe.nome_e_atributos_de_classe())
